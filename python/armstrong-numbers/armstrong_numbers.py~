@@ -1,0 +1,18 @@
+def is_armstrong_number(number):
+    return number == sum(map(lambda digit, pow=len(str(number)): int(digit) ** pow, str(number)))
+
+
+
+def is_armstrong_number1(number):
+    if number == 0:
+        return True
+    count = 0
+    coll = []
+    orig_num = number 
+    while number != 0:
+        coll.append(number % 10)
+        number = number // 10
+        count += 1
+    return orig_num == sum(map(lambda digit: digit ** count, coll))
+        
+            

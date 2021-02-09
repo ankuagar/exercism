@@ -1,0 +1,4 @@
+def is_pangram(sentence):
+    base = set('abcdefghijklmnopqrstuvwxyz')
+    given = filter(lambda c: 'a' <= c <= 'z', sentence.lower())
+    return base == given
